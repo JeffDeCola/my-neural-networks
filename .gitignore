@@ -1,25 +1,37 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
+# golang-build.gitignore
 
-# Test binary, built with `go test -c`
-*.test
+# CONCOURSE SECRETS
+.concourse-secrets.yml
 
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
+# SSH KEYS
+id_rsa*
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+# PGP KEYS
+*.pgp
 
-# Go workspace file
-go.work
-go.work.sum
+# macOS
+.DS_Store
 
-# env file
-.env
+# WINDOWS
+*.jpg:Zone.Identifier
+
+# TAR FILES
+*.tar.gz
+*.tar.gz.gpg
+
+# RUN (BINARIES)
+**/bin/crypto-minor-manager
+**/bin/crypto-wallet-status
+**/bin/your-metasol-nft-private
+**/bin/catch-microservice
+**/bin/data-crunch-engine
+
+# TEST
+**/test/test_coverage.txt
+
+# BUILD (BINARIES CREATED DURING DOCKER BUILD)
+**/build/crypto-minor-manager
+**/build/crypto-wallet-status
+**/build/your-metasol-nft-private
+**/build/catch-microservice
+**/build/data-crunch-engine
