@@ -1,4 +1,4 @@
-# MULTI-LAYER PERCEPTRON (MLP) NEURAL NETWORK
+# MULTI-LAYER PERCEPTRON (MLP) SCALABLE
 
 _This is an implementation of a user scalable multi-layer
 perceptron (MLP) / feed-forward (FF) neural network using a
@@ -25,9 +25,10 @@ neural network will be used to classify data into two categories.
 
 This project implements a multi-layer perceptron (MLP) neural network designed
 to predict student performance based on three input features:
-* midterm grade, 
-* hours studied, and 
-* last test grade.
+
+* midterm grade
+* hours studied
+* last test grade
 
 The network consists of three hidden layers, each containing four nodes,
 and produces two outputs:
