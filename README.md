@@ -19,14 +19,14 @@ Documentation and Reference
 
 ## PERCEPTRON
 
-* [perceptron-simple-example]()
+* [perceptron-simple-example](https://github.com/JeffDeCola/my-neural-networks/tree/main/perceptron-simple-example)
 
   _tbd_
 
 ## MULTI-LAYER PERCEPTRON (MLP)
 
-* [multi-layer-perceptron-scalable]()
+* [multi-layer-perceptron-scalable](https://github.com/JeffDeCola/my-neural-networks/tree/main/multi-layer-perceptron-scalable)
 
   _An implementation of a user scalable multi-layer
-perceptron (MLP) / feed-forward (FF) neural network using a
-sigmoid non-linear function written in go._
+  perceptron (MLP) / feed-forward (FF) neural network using a
+  sigmoid non-linear function written in go._
