@@ -21,7 +21,8 @@ Documentation and Reference
 
 * [perceptron-simple-example](https://github.com/JeffDeCola/my-neural-networks/tree/main/perceptron-simple-example)
 
-  _tbd_
+  _A simple an implementation of a perceptron (P) neural network
+  written in go._
 
 ## MULTI-LAYER PERCEPTRON (MLP)
 
