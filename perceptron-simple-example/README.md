@@ -1,6 +1,6 @@
-# PERCEPTRON NEURAL NETWORK
+# PERCEPTRON SIMPLE EXAMPLE
 
-_This is a simple an implementation of a perceptron (P) neural network
+_A simple an implementation of a perceptron (P) neural network
 written in go._
 
 Table of Contents
