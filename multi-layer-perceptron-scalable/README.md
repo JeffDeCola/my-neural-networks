@@ -6,12 +6,12 @@ sigmoid non-linear function written in go._
 
 Table of Contents
 
-* [OVERVIEW](#OVERVIEW)
-* [TRAINING DATA](#TRAINING-DATA)
-* [TRAINING (BACKPROPAGATION)](#TRAINING-BACKPROPAGATION)
-  * [STEP 1 - FORWARD PASS](#STEP-1---FORWARD-PASS)
-  * [STEP 2 - BACKWARD PASS](#STEP-2---BACKWARD-PASS)
-  * [STEP 3 - UPDATE WEIGHTS](#STEP-3---UPDATE-WEIGHTS)
+* [OVERVIEW](https://github.com/JeffDeCola/my-neural-networks/tree/main/multi-layer-perceptron-scalable#overview)
+* [TRAINING DATA](https://github.com/JeffDeCola/my-neural-networks/tree/main/multi-layer-perceptron-scalable#training-data)
+* [TRAINING](https://github.com/JeffDeCola/my-neural-networks/tree/main/multi-layer-perceptron-scalable#training)
+  * [STEP 1 - FORWARD PASS](https://github.com/JeffDeCola/my-neural-networks/tree/main/multi-layer-perceptron-scalable#step-1---forward-pass)
+  * [STEP 2 - BACKWARD PASS](https://github.com/JeffDeCola/my-neural-networks/tree/main/multi-layer-perceptron-scalable#step-2---backward-pass)
+  * [STEP 3 - UPDATE WEIGHTS](https://github.com/JeffDeCola/my-neural-networks/tree/main/multi-layer-perceptron-scalable#step-3---update-weights)
 
 Documentation and Reference
 
@@ -45,7 +45,7 @@ It will have the following structure,
 * Target Data: $z_{[0]}$, $z_{[1]}$
 * Activation Function: Sigmoid $f(s)$
 
-![IMAGE mathematical model of a neuron - IMAGE](./feed-forward-multi-layer-perceptron-neural-network.svg)
+![IMAGE feed-forward-multi-layer-perceptron-neural-network IMAGE](../docs/pics/feed-forward-multi-layer-perceptron-neural-network.svg)
 
 ## TRAINING DATA
 
@@ -62,7 +62,7 @@ etc... & etc... & etc... & etc... & etc... \\
 \end{bmatrix}
 $$
 
-## TRAINING (BACKPROPAGATION)
+## TRAINING
 
 A training data set for the neural
 network on a set of training data.
@@ -80,25 +80,26 @@ Giving our $x_{[0]}$, $x_{[1]}$ and $x_{[2]}$ input training data,
 propagate through layers to obtain the outputs
 $y_{[0]}$ and $y_{[1]}$**.
 
-![IMAGE feed-forward-multi-layer-perceptron-neural-network-training-step-1 - IMAGE](feed-forward-multi-layer-perceptron-neural-network-training-step-1.svg)
+![IMAGE feed-forward-multi-layer-perceptron-neural-network-training-step-1 - IMAGE](../docs/pics/feed-forward-multi-layer-perceptron-neural-network-training-step-1.svg)
 
 Normalize the input data between -1 and 1,
 
 $$
-\mathbf{x_{[0]}} = normalize(i_{[0]}) \\
-\mathbf{x_{[1]}} = normalize(i_{[1]}) \\
-\mathbf{x_{[2]}} = normalize(i_{[2]})
+\begin{aligned}
+x_{[0]} &= normalize(i_{[0]}) \\
+x_{[1]} &= normalize(i_{[1]}) \\
+x_{[2]} &= normalize(i_{[2]})
+\end{aligned}
 $$
 
 Calculate the hidden layer outputs,
 
 $$
 \begin{aligned}
-\mathbf{y_{h1[0]}} &= f_{h1[0]}(s) = f_{h1[0]}\left(x_{[0]} w_{h1[0]X[0]} + x_{[1]} w_{h1[0]X[1]} + x_{[2]} w_{h1[0]X[2]} + b_{h1[0]}\right) \\
-\mathbf{y_{h1[1]}} &= f_{h1[1]}(s) = f_{h1[1]}\left(x_{[0]} w_{h1[1]X[0]} + x_{[1]} w_{h1[1]X[1]} + x_{[2]} w_{h1[1]X[2]} + b_{h1[1]}\right) \\
-\mathbf{y_{h1[2]}} &= f_{h1[2]}(s) = f_{h1[2]}\left(x_{[0]} w_{h1[2]X[0]} + x_{[1]} w_{h1[2]X[1]} + x_{[2]} w_{h1[2]X[2]} + b_{h1[2]}\right) \\
-\mathbf{y_{h1[3]}} &= f_{h1[3]}(s) = f_{h1[3]}\left(x_{[0]} w_{h1[3]X[0]} + x_{[1]} w_{h1[3]X[1]} + x_{[2]} w_{h1[3]X[2]} + b_{h1[3]}\right) \\
-
+y_{h1[0]} &= f_{h1[0]}(s) = f_{h1[0]}\left(x_{[0]} w_{h1[0]X[0]} + x_{[1]} w_{h1[0]X[1]} + x_{[2]} w_{h1[0]X[2]} + b_{h1[0]}\right) \\
+y_{h1[1]} &= f_{h1[1]}(s) = f_{h1[1]}\left(x_{[0]} w_{h1[1]X[0]} + x_{[1]} w_{h1[1]X[1]} + x_{[2]} w_{h1[1]X[2]} + b_{h1[1]}\right) \\
+y_{h1[2]} &= f_{h1[2]}(s) = f_{h1[2]}\left(x_{[0]} w_{h1[2]X[0]} + x_{[1]} w_{h1[2]X[1]} + x_{[2]} w_{h1[2]X[2]} + b_{h1[2]}\right) \\
+y_{h1[3]} &= f_{h1[3]}(s) = f_{h1[3]}\left(x_{[0]} w_{h1[3]X[0]} + x_{[1]} w_{h1[3]X[1]} + x_{[2]} w_{h1[3]X[2]} + b_{h1[3]}\right)
 \end{aligned}
 $$
 
@@ -106,8 +107,8 @@ Finally, calculate the outputs,
 
 $$
 \begin{aligned}
-\mathbf{y_{[0]}} = y_{o[0]} &= f_{o[0]}(s) = f_{o[0]}\left(y_{h1[0]} w_{o[0]h1[0]} + y_{h1[1]} w_{o[0]h1[1]} + y_{h1[2]} w_{o[0]h1[2]} + y_{h1[3]} w_{o[0]h1[3]} + b_{o[0]}\right) \\
-\mathbf{y_{[1]}} = y_{o[1]} &= f_{o[1]}(s) = f_{o[1]}\left(y_{h1[0]} w_{o[1]h1[0]} + y_{h1[1]} w_{o[1]h1[1]} + y_{h1[2]} w_{o[1]h1[2]} + y_{h1[3]} w_{o[1]h1[3]} + b_{o[1]}\right) \\
+y_{[0]} = y_{o[0]} &= f_{o[0]}(s) = f_{o[0]}\left(y_{h1[0]} w_{o[0]h1[0]} + y_{h1[1]} w_{o[0]h1[1]} + y_{h1[2]} w_{o[0]h1[2]} + y_{h1[3]} w_{o[0]h1[3]} + b_{o[0]}\right) \\
+y_{[1]} = y_{o[1]} &= f_{o[1]}(s) = f_{o[1]}\left(y_{h1[0]} w_{o[1]h1[0]} + y_{h1[1]} w_{o[1]h1[1]} + y_{h1[2]} w_{o[1]h1[2]} + y_{h1[3]} w_{o[1]h1[3]} + b_{o[1]}\right) \\
 \end{aligned}
 $$
 
@@ -120,7 +121,7 @@ Now  that we have the outputs $y$, calculate the error (delta **$\delta$**)
 between target data ($z$) and actual output ($y$)
 and propagate backwards.
 
-![IMAGE feed-forward-multi-layer-perceptron-neural-network-training-step-2 - IMAGE](feed-forward-multi-layer-perceptron-neural-network-training-step-2.svg)
+![IMAGE feed-forward-multi-layer-perceptron-neural-network-training-step-2 - IMAGE](../docs/pics/feed-forward-multi-layer-perceptron-neural-network-training-step-2.svg)
 
 The output error,
 
@@ -146,7 +147,7 @@ $$
 
 Update the weights using the error (delta $\delta$) and the learning rate $\alpha$.
 
-![IMAGE feed-forward-multi-layer-perceptron-neural-network-training-step-3 - IMAGE](feed-forward-multi-layer-perceptron-neural-network-training-step-3.svg)
+![IMAGE feed-forward-multi-layer-perceptron-neural-network-training-step-3 - IMAGE](../docs/pics/feed-forward-multi-layer-perceptron-neural-network-training-step-3.svg)
 
 The new weights,
 

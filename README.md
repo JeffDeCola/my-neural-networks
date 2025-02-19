@@ -7,8 +7,8 @@ _A place to keep my neural networks written in go._
 
 Table of Contents
 
-* [OVERVIEW](#overview)
-* [MULTI-LAYER PERCEPTRON (MLP)](#multi-layer-perceptron-mlp)
+* [PERCEPTRON](https://github.com/JeffDeCola/my-neural-networks#perceptron)
+* [MULTI-LAYER PERCEPTRON (MLP)](https://github.com/JeffDeCola/my-neural-networks#multi-layer-perceptron-mlp)
 
 Documentation and Reference
 
