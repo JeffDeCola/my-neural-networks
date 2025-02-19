@@ -5,7 +5,7 @@ written in go._
 
 Table of Contents
 
-* [OVERVIEW](#OVERVIEW)
+* [OVERVIEW](https://github.com/JeffDeCola/my-neural-networks/tree/main/perceptron-simple-example#overview)
 
 Documentation and Reference
 
