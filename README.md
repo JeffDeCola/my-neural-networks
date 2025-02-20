@@ -3,7 +3,7 @@
 [![MIT License](https://img.shields.io/:license-mit-blue.svg)](https://jeffdecola.mit-license.org)
 [![jeffdecola.com](https://img.shields.io/badge/website-jeffdecola.com-blue)](https://jeffdecola.com)
 
-_A place to keep my neural networks written in go._
+_A place to keep my deep learning neural networks written in go._
 
 Table of Contents
 
@@ -26,8 +26,17 @@ Documentation and Reference
 
 ## MULTI-LAYER PERCEPTRON (MLP)
 
-* [multi-layer-perceptron-scalable](https://github.com/JeffDeCola/my-neural-networks/tree/main/multi-layer-perceptron-scalable)
+* [mlp-classification-example](https://github.com/JeffDeCola/my-neural-networks/mlp-classification-example)
 
-  _An implementation of a user scalable multi-layer
-  perceptron (MLP) / feed-forward (FF) neural network using a
-  sigmoid non-linear function written in go._
+  _Using my multi-layer perceptron (MLP) neural network go package for
+  data classification._
+
+* [mlp-regression-example](https://github.com/JeffDeCola/my-neural-networks/mlp-regression-example)
+
+  _Using my multi-layer perceptron (MLP) neural network go package for
+  data prediction._
+
+* [mlp-image-recognition-example](https://github.com/JeffDeCola/my-neural-networks/mlp-image-recognition-example)
+
+  _Using my multi-layer perceptron (MLP) neural network go package for
+  image recognition._
