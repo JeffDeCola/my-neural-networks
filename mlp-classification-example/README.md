@@ -5,13 +5,16 @@ data classification._
 
 Table of Contents
 
-* [PERCEPTRON](https://github.com/JeffDeCola/my-neural-networks#perceptron)
-* [MULTI-LAYER PERCEPTRON (MLP)](https://github.com/JeffDeCola/my-neural-networks#multi-layer-perceptron-mlp)
+* []()
+* []()
 
 Documentation and Reference
 
 * [Artificial intelligence cheat sheet](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/development/software-architectures/artificial-intelligence/artificial-intelligence-cheat-sheet)
 * [Neural networks cheat sheet](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/development/software-architectures/artificial-intelligence/artificial-intelligence-cheat-sheet/neural-networks.md)
+* My
+ [mlp go package](https://github.com/JeffDeCola/my-go-packages/tree/master/mlp)
+ I use for this example
 
 ## OVERVIEW
 
@@ -28,16 +31,21 @@ and produces two outputs:
 * the percentage likelihood of passing the final test and
 * the predicted final grade.
 
-It will have the following structure,
+Hence, I will start with the following parameters to build my neural network,
 
-* Input Data:  $i_{[1]}$, $i_{[2]}$, $i_{[3]}$
-* Input Nodes: 3
-* Hidden Nodes: 4
-* Output Nodes: 2
-* Target Data: $z_{[0]}$, $z_{[1]}$
-* Activation Function: Sigmoid $f(s)$
-
-
+```go
+nnp := mlp.NeuralNetworkParameters{
+  InputNodes:          3,
+  InputNodeLabels:     []string{"midterm-grade", "hours-studied", "last-test-grade"},
+  HiddenLayers:        3,
+  HiddenNodesPerLayer: []int{4, 4, 4},
+  OutputNodes:         2,
+  OutputNodeLabels:    []string{"pred-perc-passing-final", "pred-final-grade"},
+  LearningRate:        0.1,
+  Epochs:              4,
+  DatasetCSVFile:      "dataset.csv",
+}
+```
 
 ## TRAINING DATA
 
@@ -53,3 +61,11 @@ i_{[0]} & i_{[1]} & i_{[2]} & z_{[0]} & z_{[1]} \\
 etc. & etc. & etc. & etc. & etc.
 \end{bmatrix}
 $$
+
+## EXAMPLE
+
+This is a main go code I used,
+
+```go
+
+```
