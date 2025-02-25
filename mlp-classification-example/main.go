@@ -25,7 +25,7 @@ func main() {
 	fmt.Println("\nCREATE NEURAL NETWORK --------------------------------------")
 	nn := nnp.CreateNeuralNetwork()
 
-	// Initialize the neural network (weights and bios) with numbers from -1 to 1
+	// Initialize the neural network (weights and bios with numbers from -1 to 1)
 	fmt.Println("\nINITIALIZE NEURAL NETWORK ----------------------------------")
 	nn.InitializeNeuralNetwork()
 
@@ -52,5 +52,7 @@ func main() {
 	// Print the trained neural network
 	// fmt.Println("\nPRINT NEURAL NETWORK ---------------------------------------")
 	// nn.PrintNeuralNetwork()
+
+	//
 
 }

@@ -36,12 +36,10 @@ Documentation and Reference
 
   _Using my multi-layer perceptron
   ([mlp](https://github.com/JeffDeCola/my-go-packages/tree/master/mlp))
-  neural network go package for
-  image recognition._
+  neural network go package for image recognition._
 
 * [mlp-regression-example](https://github.com/JeffDeCola/my-neural-networks/tree/main/mlp-image-recognition-example)
 
   _Using my multi-layer perceptron
   ([mlp](https://github.com/JeffDeCola/my-go-packages/tree/master/mlp))
-  neural network go package for
-  data prediction._
+  neural network go package for data prediction.
