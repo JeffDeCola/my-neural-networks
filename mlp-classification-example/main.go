@@ -10,14 +10,14 @@ func main() {
 
 	// Neural Network Parameters
 	nnp := mlp.NeuralNetworkParameters{
-		InputNodes:          3,
+		InputNodes:          2,
 		InputNodeLabels:     []string{"midterm-grade", "hours-studied", "last-test-grade"},
-		HiddenLayers:        3,
-		HiddenNodesPerLayer: []int{4, 4, 4},
-		OutputNodes:         2,
+		HiddenLayers:        1,
+		HiddenNodesPerLayer: []int{2},
+		OutputNodes:         1,
 		OutputNodeLabels:    []string{"predicted-percentage-passing-final", "predicted-final-grade"},
 		LearningRate:        0.1,
-		Epochs:              4,
+		Epochs:              2,
 		DatasetCSVFile:      "dataset.csv",
 	}
 
