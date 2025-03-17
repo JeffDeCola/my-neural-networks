@@ -10,35 +10,37 @@ func main() {
 
 	// Neural Network Parameters
 	nnp := mlp.NeuralNetworkParameters{
-		InputNodes:              2,
-		InputNodeLabels:         []string{"midterm-grade", "hours-studied", "last-test-grade"},
-		HiddenLayers:            1,
-		HiddenNodesPerLayer:     []int{3},
-		OutputNodes:             1,
-		OutputNodeLabels:        []string{"predicted-percentage-passing-final", "predicted-final-grade"},
-		LearningRate:            0.1,
-		Epochs:                  10,
-		DatasetCSVFile:          "dataset.csv",
-		Initialization:          "file", // "random" or "file"
-		WeightsAndBiasesCSVFile: "weights-and-biases.csv",
-		MinMaxInput:             []float64{0.0, 100.0, 0.0, 100.0, 0.0, 100.0},
-		MinMaxOutput:            []float64{0.0, 100.0},
-		UseMinMaxInput:          false,
-		UseMinMaxOutput:         true,
-		NormalizeInputData:      true,
-		NormalizeOutputData:     true,
-		NormalizeMethod:         "zero-to-one",        // "zero-to-one" or "minus-one-to-one"
-		ActivationFunction:      "sigmoid",            // "sigmoid" or "tanh"
-		LossFunction:            "mean-squared-error", // "mean-squared-error" or "cross-entropy"
+		Mode:                         "training", // "training", "testing" or "predicting"
+		InputNodes:                   2,
+		InputNodeLabels:              []string{"x[0]", "x[1]"},
+		HiddenLayers:                 2,             // Also update HiddenNodesPerLayer
+		HiddenNodesPerLayer:          []int{15, 15}, // If using a file, must match
+		OutputNodes:                  1,
+		OutputNodeLabels:             []string{"y[0]"},
+		Epochs:                       5000,
+		LearningRate:                 0.1,
+		ActivationFunction:           "sigmoid",                     // "sigmoid" or "tanh"
+		LossFunction:                 "mean-squared-error",          // "mean-squared-error"
+		InitWeightsBiasesMethod:      "file",                        // "file" or "random"
+		InitWeightsBiasesJSONFile:    "trained-weights-biases.json", // ???????????????????????????????????
+		TrainingDatasetCSVFile:       "training-dataset.csv",
+		MinMaxInputMethod:            "calculate",   // "file" or "calculate" - Calculate from TrainingDatasetCSVFile
+		MinMaxOutputMethod:           "calculate",   // "file" or "calculate" - Calculate from TrainingDatasetCSVFile
+		MinMaxJSONFile:               "minmax.json", // Can be used for both training and testing
+		NormalizeInputData:           true,
+		NormalizeOutputData:          true,
+		NormalizeMethod:              "zero-to-one", // "zero-to-one" or "minus-one-to-one"
+		TrainedWeightsBiasesJSONFile: "trained-weights-biases.json",
+		TestingDatasetCSVFile:        "testing-dataset.csv",
 	}
 
 	// Create a new neural network
-	fmt.Println("\nCREATE NEURAL NETWORK --------------------------------------")
+	fmt.Println("\nCreate a new neural network")
 	nn := nnp.CreateNeuralNetwork()
 
 	// Initialize the neural network (weights and bios with numbers from -1 to 1)
 	// Will chose between random or file initialization
-	fmt.Println("\nSTEP 1 - INITIALIZATION ------------------------------------")
+	fmt.Println("\nInitialize the neural network")
 	err := nn.InitializeNeuralNetwork()
 	if err != nil {
 		fmt.Println("Error:", err)
@@ -46,7 +48,7 @@ func main() {
 	}
 
 	// Get the input min and max values from the CSV file
-	fmt.Println("\nSTEP 2 - MIN & MAX INPUT VALUES ----------------------------")
+	fmt.Println("\nGet the input min and max values from the CSV file")
 	err = nn.SetMinMaxValues()
 	if err != nil {
 		fmt.Println("Error:", err)
@@ -54,19 +56,44 @@ func main() {
 	}
 
 	// Print the input min and max values
-	fmt.Println("\nPRINT INPUT MIN AND MAX VALUES -----------------------------")
+	fmt.Println("\nPrint the input min and max values")
 	nn.PrintDatasetMinMax()
 
 	// Print the neural network
-	fmt.Println("\nPRINT NEURAL NETWORK ---------------------------------------")
+	fmt.Println("\nPrint the neural network")
 	nn.PrintNeuralNetwork()
 
 	// Train the neural network with dataset from a CSV file
-	fmt.Println("\nTHE TRAINING LOOP ------------------------------------------")
-	fmt.Println("\nSTEP 3 - NORMALIZATION -------------------------------------")
-	fmt.Println("\nSTEP 4 - FORWARD PASS --------------------------------------")
-	fmt.Println("\nSTEP 5 - BACKWARD PASS -------------------------------------")
+	/*fmt.Println("\nTrain the neural network with dataset from a CSV file")
 	err = nn.TrainNeuralNetwork()
+	if err != nil {
+		fmt.Println("Error:", err)
+		return
+	}*/
+
+	// Save the weights and biases to a json file
+	// It will overwrite the file if it already exists
+	/*fmt.Println("\nSave the weights and biases to a json file")
+	err = nn.SaveWeightsBiasesToJSON()
+	if err != nil {
+		fmt.Println("Error:", err)
+		return
+	}*/
+
+	// Save the min and max values to a json file
+	// It will overwrite the file if it already exists
+	/*fmt.Println("\nSave the min and max values to a json file")
+	err = nn.SaveMinMaxToJSON()
+	if err != nil {
+		fmt.Println("Error:", err)
+		return
+	}*/
+
+	// Test the neural network with the trained weights and biases
+	// fmt.Println("\nRun the neural network with the trained weights and biases")
+	// Read in the weights and biases from a json file
+	data := []float64{80, 70, 73}
+	err = nn.TestingNeuralNetwork(data)
 	if err != nil {
 		fmt.Println("Error:", err)
 		return
