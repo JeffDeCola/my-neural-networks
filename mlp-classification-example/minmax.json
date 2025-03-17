@@ -1,0 +1,16 @@
+{
+  "minInput": [
+    45,
+    55
+  ],
+  "maxInput": [
+    80,
+    98
+  ],
+  "minOutput": [
+    52
+  ],
+  "maxOutput": [
+    87
+  ]
+}
