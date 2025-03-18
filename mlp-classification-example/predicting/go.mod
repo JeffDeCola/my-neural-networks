@@ -1,4 +1,4 @@
-module mlp-classification-example
+module mlp-classification-example/predicting
 
 go 1.24.0
 
