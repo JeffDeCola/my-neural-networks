@@ -2,15 +2,14 @@ package main
 
 import (
 	"fmt"
-	"log/slog"
-
-	logger "my-go-packages/golang/logger"
 	mlp "my-go-packages/neural-networks/mlp"
+
+	logger "github.com/JeffDeCola/my-go-packages/golang/logger"
 )
 
 func main() {
 
-	log := logger.SetupLogger(slog.LevelInfo) // slog.LevelDebug, slog.LevelInfo, slog.LevelWarn, slog.LevelError
+	log := logger.CreateLogger(logger.LevelDebug, "jeff")
 
 	// Neural Network Parameters
 	nnp := mlp.NeuralNetworkConfiguration{
@@ -48,7 +47,7 @@ func main() {
 	fmt.Println("\nInitialize the neural network")
 	err := nn.InitializeNeuralNetwork()
 	if err != nil {
-		fmt.Println("Error:", err)
+		log.Error("Error: %s", err)
 		return
 	}
 
@@ -56,7 +55,7 @@ func main() {
 	fmt.Println("\nGet the input min and max values from the CSV file")
 	err = nn.SetMinMaxValues()
 	if err != nil {
-		fmt.Println("Error:", err)
+		log.Error("Error: %s", err)
 		return
 	}
 
@@ -72,7 +71,7 @@ func main() {
 	fmt.Println("\nTrain the neural network with dataset from a CSV file")
 	err = nn.TrainNeuralNetwork()
 	if err != nil {
-		fmt.Println("Error:", err)
+		log.Error("Error: %s", err)
 		return
 	}
 
@@ -81,7 +80,7 @@ func main() {
 	fmt.Println("\nSave the min and max values to a json file")
 	err = nn.SaveMinMaxValuesToJSON()
 	if err != nil {
-		fmt.Println("Error:", err)
+		log.Error("Error: %s", err)
 		return
 	}
 
@@ -90,13 +89,23 @@ func main() {
 	fmt.Println("\nSave the weights and biases to a json file")
 	err = nn.SaveWeightsBiasesToJSON()
 	if err != nil {
-		fmt.Println("Error:", err)
+		log.Error("Error: %s", err)
 		return
 	}
 
-	log.Debug("This is a debug message")
-	log.Info("Application started")
-	log.Warn("This is a warning")
-	log.Error("An error occurred")
+	log.Debug("This is a debug message") // Won't show (INFO level)
+	log.Info("This is a Info Message", "env", "production", "user", "jeff")
+	log.Warning("This is a Warning Message", 500)
+	log.Error("This is an Error message")
+	// log.Fatal("Done")
+
+	// Dynamically change log level
+	fmt.Printf("\nCHANGE LEVEL\n\n")
+	log.ChangeLogLevel(logger.LevelDebug)
+
+	log.Debug("This is a debug message") // Won't show (INFO level)
+	log.Info("This is a Info Message", "env", "production", "user", "jeff")
+	log.Warning("This is a Warning Message", 500)
+	log.Error("This is an Error message")
 
 }
