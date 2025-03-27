@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	mlp "my-go-packages/mlp"
+	mlp "my-go-packages/neural-networks/mlp"
 )
 
 func main() {
