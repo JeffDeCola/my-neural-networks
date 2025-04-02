@@ -7,8 +7,9 @@ _A place to keep my deep learning neural networks written in go._
 
 Table of Contents
 
-* [PERCEPTRON](https://github.com/JeffDeCola/my-neural-networks#perceptron)
+* [MATH](https://github.com/JeffDeCola/my-neural-networks#math)
 * [MULTI-LAYER PERCEPTRON (MLP)](https://github.com/JeffDeCola/my-neural-networks#multi-layer-perceptron-mlp)
+* [PERCEPTRON](https://github.com/JeffDeCola/my-neural-networks#perceptron)
 
 Documentation and Reference
 
@@ -17,12 +18,15 @@ Documentation and Reference
 * [neural networks](https://github.com/JeffDeCola/my-cheat-sheets/blob/master/software/development/software-architectures/artificial-intelligence/artificial-intelligence-cheat-sheet/neural-networks.md)
   cheat sheet
 
-## PERCEPTRON
+## MATH
 
-* [perceptron-simple-example](https://github.com/JeffDeCola/my-neural-networks/tree/main/perceptron-simple-example)
+* [the-math-behind-training-mlp-neural-networks](https://github.com/JeffDeCola/my-neural-networks/tree/main/math/the-math-behind-training-mlp-neural-networks)
 
-  _A simple an implementation of a perceptron (P) neural network
-  written in go._
+  _The example I used for my cheat sheet
+  [the-math-behind-training-mlp-neural-networks](https://github.com/JeffDeCola/my-cheat-sheets/blob/master/software/development/software-architectures/artificial-intelligence/artificial-intelligence-cheat-sheet/the-math-behind-training-mlp-neural-networks.md)
+  using my multi-layer perceptron
+  ([mlp](https://github.com/JeffDeCola/my-go-packages/tree/master/neural-networks/mlp))
+  neural network go package._
 
 ## MULTI-LAYER PERCEPTRON (MLP)
 
@@ -42,4 +46,11 @@ Documentation and Reference
 
   _Using my multi-layer perceptron
   ([mlp](https://github.com/JeffDeCola/my-go-packages/tree/master/neural-networks/mlp))
-  neural network go package for data prediction.
+  neural network go package for data prediction._
+
+## PERCEPTRON
+
+* [perceptron-simple-example](https://github.com/JeffDeCola/my-neural-networks/tree/main/perceptron-simple-example)
+
+  _A simple an implementation of a perceptron (P) neural network
+  written in go._
