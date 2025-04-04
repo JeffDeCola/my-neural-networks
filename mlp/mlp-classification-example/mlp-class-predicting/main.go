@@ -2,11 +2,15 @@ package main
 
 import (
 	"fmt"
+	"os"
 
+	logger "my-go-packages/golang/logger"
 	mlp "my-go-packages/neural-networks/mlp"
 )
 
 func main() {
+
+	log := logger.CreateLogger(logger.Debug, "jeffs_noTime", os.Stdout)
 
 	// Neural Network Parameters
 	nnp := mlp.NeuralNetworkParameters{

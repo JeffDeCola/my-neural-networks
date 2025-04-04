@@ -8,12 +8,14 @@ neural network go package._
 
 Table of Contents
 
-* [OVERVIEW](https://github.com/JeffDeCola/my-neural-networks/tree/main/perceptron-simple-example#overview)
+* [OVERVIEW](https://github.com/JeffDeCola/my-neural-networks/tree/main/math/the-math-behind-training-mlp-neural-networks#overview)
 
 Documentation and Reference
 
 * [artificial intelligence](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/development/software-architectures/artificial-intelligence/artificial-intelligence-cheat-sheet)
-* [neural networks](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/development/software-architectures/artificial-intelligence/artificial-intelligence-cheat-sheet/neural-networks-cheat-sheet.md)
+* [neural networks](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/development/software-architectures/artificial-intelligence/artificial-intelligence-cheat-sheet/neural-networks.md)
+* [the-math-behind-training-mlp-neural-networks](https://github.com/JeffDeCola/my-cheat-sheets/blob/master/software/development/software-architectures/artificial-intelligence/artificial-intelligence-cheat-sheet/the-math-behind-training-mlp-neural-networks.md)
+* [my mlp go package](https://github.com/JeffDeCola/my-go-packages/tree/master/neural-networks/mlp)
 
 ## OVERVIEW
 

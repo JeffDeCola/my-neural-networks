@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 
 	logger "my-go-packages/golang/logger"
 	mlp "my-go-packages/neural-networks/mlp"
@@ -9,7 +10,7 @@ import (
 
 func main() {
 
-	log := logger.CreateLogger(logger.Debug, "jeffs_noTime")
+	log := logger.CreateLogger(logger.Debug, "jeffs_noTime", os.Stdout)
 
 	// To gain insight on the inner working of the mlp
 	// You may set logging level for mlp package
