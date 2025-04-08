@@ -34,13 +34,13 @@ Documentation and Reference
   ([mlp](https://github.com/JeffDeCola/my-go-packages/tree/master/neural-networks/mlp))
   neural network go package for data classification._
 
-* [mlp-image-recognition-example](https://github.com/JeffDeCola/my-neural-networks/tree/main/mlp/mlp-regression-example)
+* [mlp-image-recognition-example](https://github.com/JeffDeCola/my-neural-networks/tree/main/mlp/mlp-image-recognition-example)
 
   _Using my multi-layer perceptron
   ([mlp](https://github.com/JeffDeCola/my-go-packages/tree/master/neural-networks/mlp))
   neural network go package for image recognition._
 
-* [mlp-regression-example](https://github.com/JeffDeCola/my-neural-networks/tree/main/mlp/mlp-image-recognition-example)
+* [mlp-regression-example](https://github.com/JeffDeCola/my-neural-networks/tree/main/mlp/mlp-regression-example)
 
   _Using my multi-layer perceptron
   ([mlp](https://github.com/JeffDeCola/my-go-packages/tree/master/neural-networks/mlp))

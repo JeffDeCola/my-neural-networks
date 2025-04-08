@@ -1,5 +1,8 @@
 # MLP CLASSIFICATION EXAMPLE
 
+[![jeffdecola.com](https://img.shields.io/badge/website-jeffdecola.com-blue)](https://jeffdecola.com)
+[![MIT License](https://img.shields.io/:license-mit-blue.svg)](https://jeffdecola.mit-license.org)
+
 _Using my multi-layer perceptron
 ([mlp](https://github.com/JeffDeCola/my-go-packages/tree/master/neural-networks/mlp))
 neural network go package for data classification._
@@ -7,6 +10,8 @@ neural network go package for data classification._
 Table of Contents
 
 * [OVERVIEW](https://github.com/JeffDeCola/my-neural-networks/tree/main/mlp/mlp-classification-example#overview)
+* [TRAINING DATA](https://github.com/JeffDeCola/my-neural-networks/tree/main/mlp/mlp-classification-example#training-data)
+* [EXAMPLE](https://github.com/JeffDeCola/my-neural-networks/tree/main/mlp/mlp-classification-example#example)
 
 Documentation and Reference
 

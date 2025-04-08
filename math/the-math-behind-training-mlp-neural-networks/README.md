@@ -1,5 +1,8 @@
 # THE MATH BEHIND TRAINING MLP NEURAL NETWORKS
 
+[![jeffdecola.com](https://img.shields.io/badge/website-jeffdecola.com-blue)](https://jeffdecola.com)
+[![MIT License](https://img.shields.io/:license-mit-blue.svg)](https://jeffdecola.mit-license.org)
+
 _The example I used for my cheat sheet
 [the-math-behind-training-mlp-neural-networks](https://github.com/JeffDeCola/my-cheat-sheets/blob/master/software/development/software-architectures/artificial-intelligence/artificial-intelligence-cheat-sheet/the-math-behind-training-mlp-neural-networks.md)
 using my multi-layer perceptron
