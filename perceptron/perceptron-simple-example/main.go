@@ -13,7 +13,7 @@ type PerceptronConfiguration struct {
 // PRIVATE - Perceptron
 type perceptron struct {
 	x []float64      // 1 of more input nodes
-	o *neuron.Neuron // 1 output node
+	o *neuron.Neuron // 1 output node which is a neuron
 }
 
 // Make Perceptron
